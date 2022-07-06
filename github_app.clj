@@ -1,11 +1,9 @@
 #!/usr/bin/env bb
 (ns github-app
-  (:require [clojure.string              :as str]
-            [babashka.pods               :as pods]
-            [babashka.curl               :as curl]
-            [cheshire.core               :as json]
-            [pod.babashka.buddy.sign.jwt :as jwt]
-            [pod.babashka.buddy.keys     :as keys])
+  (:require [clojure.string :as str]
+            [babashka.pods  :as pods]
+            [babashka.curl  :as curl]
+            [cheshire.core  :as json])
   (:import (java.time Instant)
            (java.time.temporal ChronoUnit)))
 
@@ -13,6 +11,9 @@
 
 ;; we need the buddy pod to create the application access-key
 (pods/load-pod 'org.babashka/buddy "0.2.0")
+(require
+  '[pod.babashka.buddy.sign.jwt :as jwt]
+  '[pod.babashka.buddy.keys     :as keys])
 
 
 
@@ -112,7 +113,7 @@
   (def repo "<repo>")
   ;; Path to Github App private key, e.g /tmp/bb-checks.pem
   (def private-key "<private-pem-path>")
-  ;; Commit you want to create the check runs on, e.g TODO
+  ;; Commit you want to create the check runs on, e.g 60c83533123fac893b88a20d24938f488cf63968
   (def commit "<commit>")
 
 

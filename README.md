@@ -7,6 +7,7 @@ and interaction with the Checks API we are not plugging on a complete webhook
 demo, you could use what you have learned from here and follow the [official
 Github tutorial](https://docs.github.com/en/developers/apps/guides/creating-ci-tests-with-the-checks-api)
 
+[These runs were created using this demo.](https://github.com/brandonstubbs/bb-github-app/runs/7220694563)
 
 ## Prerequisites
 You will need two things: \
@@ -47,5 +48,6 @@ you just need to install it into yours.
 
 
 ## Run Example
-Open [github_app.clj](github_app.clj) and navigate to the [Rich Comment Block](https://betweentwoparens.com/blog/rich-comment-blocks/#rich-comment).
+Statup a Babashka REPL! Open [github_app.clj](github_app.clj) and navigate to
+the [Rich Comment Block](https://betweentwoparens.com/blog/rich-comment-blocks/#rich-comment).
 Change the variables under "change these" and step through the examples.
